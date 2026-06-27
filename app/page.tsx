@@ -136,7 +136,7 @@ function AnimatedLogo({ width = 150, height = 38 }: { width?: number; height?: n
         }}
       >
         <Image
-          src="/logo.svg"
+          src="/Logo.svg"
           alt="LabourBaba"
           width={width}
           height={height}
