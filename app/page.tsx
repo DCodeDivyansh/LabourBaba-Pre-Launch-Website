@@ -655,7 +655,7 @@ export default function ComingSoonPage() {
         <div className="relative h-0">
           <FloatingWorkerCard
             {...workerCards[0]}
-            className="-left-6 top-6 hidden sm:block"
+            className="-left-60 top-6 hidden sm:block"
             floatDelay={0}
             rotateBase={-6}
             mouseX={mouseX}
@@ -663,7 +663,7 @@ export default function ComingSoonPage() {
           />
           <FloatingWorkerCard
             {...workerCards[1]}
-            className="-right-8 top-44 hidden sm:block"
+            className="-right-60 top-44 hidden sm:block"
             floatDelay={1}
             rotateBase={5}
             mouseX={mouseX}
@@ -671,7 +671,7 @@ export default function ComingSoonPage() {
           />
           <FloatingWorkerCard
             {...workerCards[2]}
-            className="-left-4 top-112 hidden sm:block"
+            className="-left-40 top-112 hidden sm:block"
             floatDelay={2}
             rotateBase={-3}
             mouseX={mouseX}
