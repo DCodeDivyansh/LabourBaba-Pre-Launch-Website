@@ -17,6 +17,7 @@ import {
   MapPin,
   Star,
   Mail,
+  Phone,
   Link2,
   Sparkles,
   CheckCircle2,
@@ -25,6 +26,14 @@ import {
   Battery,
   Signal,
 } from "lucide-react";
+
+import {
+  FaInstagram,
+  FaFacebook,
+  FaLinkedin,
+  FaXTwitter,
+  FaWhatsapp,
+} from "react-icons/fa6";
 
 /* ----------------------------------------------------------------------- */
 /* Data                                                                     */
@@ -193,9 +202,8 @@ function PremiumButton({
       <motion.span
         animate={{ opacity: [0, 0.3, 0], scale: [1, 1.7, 1.7] }}
         transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut", repeatDelay: 1.4 }}
-        className={`absolute inset-0 rounded-full ${
-          variant === "solid" ? "bg-white" : "bg-[#FF5404]"
-        }`}
+        className={`absolute inset-0 rounded-full ${variant === "solid" ? "bg-white" : "bg-[#FF5404]"
+          }`}
       />
 
       {/* shimmer sweep on hover */}
@@ -391,7 +399,7 @@ function AnimatedGrid() {
         backgroundImage:
           "linear-gradient(to right, #1F2937 1px, transparent 1px), linear-gradient(to bottom, #1F2937 1px, transparent 1px)",
         backgroundSize: "40px 40px",
-      }} 
+      }}
     />
   );
 }
@@ -639,9 +647,8 @@ export default function ComingSoonPage() {
           boxShadow: scrolled ? "0 8px 24px rgba(20,30,60,0.08)" : "0 0 0 rgba(0,0,0,0)",
         }}
         transition={{ duration: 0.3 }}
-        className={`sticky top-0 z-20 backdrop-blur-md border-b ${
-          scrolled ? "border-[#EFE2DC]" : "border-transparent"
-        }`}
+        className={`sticky top-0 z-20 backdrop-blur-md border-b ${scrolled ? "border-[#EFE2DC]" : "border-transparent"
+          }`}
       >
         <div className="max-w-md mx-auto px-4 h-16 flex items-center justify-between">
           <AnimatedLogo />
@@ -891,10 +898,10 @@ export default function ComingSoonPage() {
               item.icon === Zap
                 ? { rotate: [0, -10, 10, 0] }
                 : item.icon === ShieldCheck
-                ? { filter: ["drop-shadow(0 0 0px rgba(255,84,4,0))", "drop-shadow(0 0 6px rgba(255,84,4,0.55))", "drop-shadow(0 0 0px rgba(255,84,4,0))"] }
-                : item.icon === MapPin
-                ? { scale: [1, 1.18, 1] }
-                : { rotate: [0, 15, -15, 0], scale: [1, 1.1, 1] };
+                  ? { filter: ["drop-shadow(0 0 0px rgba(255,84,4,0))", "drop-shadow(0 0 6px rgba(255,84,4,0.55))", "drop-shadow(0 0 0px rgba(255,84,4,0))"] }
+                  : item.icon === MapPin
+                    ? { scale: [1, 1.18, 1] }
+                    : { rotate: [0, 15, -15, 0], scale: [1, 1.1, 1] };
 
             return (
               <motion.div
@@ -948,7 +955,7 @@ export default function ComingSoonPage() {
           />
 
           <div className="relative">
-            <MilestoneCounter milestones={[1,23, 45,72, 80, 92]} suffix="+" />
+            <MilestoneCounter milestones={[1, 23, 45, 72, 80, 92]} suffix="+" />
             <p className="mt-1 text-xs font-semibold tracking-wider text-[#6B7280] uppercase">
               Workers Ready
             </p>
@@ -957,7 +964,7 @@ export default function ComingSoonPage() {
           <div className="relative h-px bg-[#EFE2DC] my-6" />
 
           <div className="relative">
-            <MilestoneCounter milestones={[10, 18,96,109,198, 253]} suffix="+" />
+            <MilestoneCounter milestones={[10, 18, 96, 109, 198, 253]} suffix="+" />
             <p className="mt-1 text-xs font-semibold tracking-wider text-[#6B7280] uppercase">
               Waitlist Signups
             </p>
@@ -985,20 +992,45 @@ export default function ComingSoonPage() {
             transition={{ duration: 0.4, delay: 0.08 }}
             className="mt-4 flex items-center justify-center gap-3"
           >
-            <motion.button
+            <motion.a
+              href="tel:+919696317202"
+              aria-label="Call LabourBaba"
               whileHover={{ y: -2, scale: 1.06, rotate: 12 }}
               whileTap={{ scale: 0.94 }}
               className="w-9 h-9 rounded-full bg-white border border-[#EFE2DC] flex items-center justify-center text-[#6B7280] hover:text-[#FF5404] hover:border-[#FF5404]/40 transition-colors"
             >
-              <Link2 size={15} />
-            </motion.button>
-            <motion.button
+              <Phone size={15} />
+            </motion.a>
+            <motion.a
+              href="mailto:support@labourbaba.in"
+              aria-label="Email LabourBaba"
               whileHover={{ y: -2, scale: 1.06, rotate: -12 }}
               whileTap={{ scale: 0.94 }}
               className="w-9 h-9 rounded-full bg-white border border-[#EFE2DC] flex items-center justify-center text-[#6B7280] hover:text-[#FF5404] hover:border-[#FF5404]/40 transition-colors"
             >
               <Mail size={15} />
-            </motion.button>
+            </motion.a>
+            <motion.a
+              href="https://instagram.com/labourbaba.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -2, scale: 1.06, rotate: 12 }}
+              whileTap={{ scale: 0.94 }}
+              className="w-9 h-9 rounded-full bg-white border border-[#EFE2DC] flex items-center justify-center text-[#6B7280] hover:text-[#E4405F] transition-colors"
+            >
+              <FaInstagram size={15} />
+            </motion.a>
+
+            <motion.a
+              href="https://facebook.com/labourbaba"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -2, scale: 1.06 }}
+              whileTap={{ scale: 0.94 }}
+              className="w-9 h-9 rounded-full bg-white border border-[#EFE2DC] flex items-center justify-center text-[#6B7280] hover:text-[#1877F2] transition-colors"
+            >
+              <FaFacebook size={15} />
+            </motion.a>
           </motion.div>
 
           <motion.p
