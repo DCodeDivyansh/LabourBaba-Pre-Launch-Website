@@ -1022,7 +1022,7 @@ export default function ComingSoonPage() {
             </motion.a>
 
             <motion.a
-              href="https://www.facebook.com/share/1JD3wqwnqZ/"
+              href="https://www.facebook.com/share/1ExJihbVYe/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -2, scale: 1.06 }}
